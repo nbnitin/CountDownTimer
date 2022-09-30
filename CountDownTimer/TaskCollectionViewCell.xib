@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TaskCollectionViewCell" customModule="CountDownTimer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-VU-CXU">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnx-k8-U4m">
+                                <rect key="frame" x="24" y="0.0" width="72" height="72"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Xp-Xp-qEB">
+                                        <rect key="frame" x="9.3333333333333321" y="19.333333333333332" width="53.333333333333343" height="33.666666666666671"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xnx-k8-U4m" secondAttribute="height" multiplier="1:1" id="2wT-Ou-81I"/>
+                                    <constraint firstItem="5Xp-Xp-qEB" firstAttribute="centerX" secondItem="Xnx-k8-U4m" secondAttribute="centerX" id="HCP-85-8jB"/>
+                                    <constraint firstItem="5Xp-Xp-qEB" firstAttribute="centerY" secondItem="Xnx-k8-U4m" secondAttribute="centerY" id="rG1-Qj-Qf4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcQ-zZ-UMf">
+                                <rect key="frame" x="45.333333333333336" y="106" width="29.666666666666664" height="14"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wcQ-zZ-UMf" secondAttribute="bottom" id="627-Lr-2YK"/>
+                            <constraint firstItem="wcQ-zZ-UMf" firstAttribute="centerX" secondItem="3Xa-VU-CXU" secondAttribute="centerX" id="Ah1-Ux-1Fp"/>
+                            <constraint firstItem="Xnx-k8-U4m" firstAttribute="height" secondItem="3Xa-VU-CXU" secondAttribute="height" multiplier="0.6" id="B5z-Hx-UgF"/>
+                            <constraint firstItem="Xnx-k8-U4m" firstAttribute="centerX" secondItem="3Xa-VU-CXU" secondAttribute="centerX" id="EVJ-sk-oKJ"/>
+                            <constraint firstItem="Xnx-k8-U4m" firstAttribute="top" secondItem="3Xa-VU-CXU" secondAttribute="top" id="JAP-rj-JhE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3Xa-VU-CXU" secondAttribute="trailing" id="FQM-NI-zLm"/>
+                <constraint firstItem="3Xa-VU-CXU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pfi-lC-dGs"/>
+                <constraint firstAttribute="bottom" secondItem="3Xa-VU-CXU" secondAttribute="bottom" id="hF8-Xx-ziE"/>
+                <constraint firstItem="3Xa-VU-CXU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jYi-c3-KA0"/>
+            </constraints>
+            <connections>
+                <outlet property="imgContainerView" destination="Xnx-k8-U4m" id="kL7-u4-Y8f"/>
+                <outlet property="imgTask" destination="5Xp-Xp-qEB" id="eJc-mJ-4wF"/>
+                <outlet property="lblTaskName" destination="wcQ-zZ-UMf" id="5dW-pa-MMb"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gamecontroller" catalog="system" width="128" height="79"/>
+    </resources>
+</document>
