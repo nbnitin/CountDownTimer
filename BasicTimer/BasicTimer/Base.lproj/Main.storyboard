@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00h : 00m : 00s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbt-q1-bms">
+                                <rect key="frame" x="86.000000000000014" y="136" width="221.33333333333337" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kj5-Tm-MDs">
+                                <rect key="frame" x="142" y="192" width="109.33333333333331" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Timer"/>
+                                <connections>
+                                    <action selector="btnStartTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6A-De-Ag7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1io-Ff-vxK">
+                                <rect key="frame" x="137" y="247" width="119" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pause Timer"/>
+                                <connections>
+                                    <action selector="btnPauseTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0i4-Sp-fDa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nbt-q1-bms" secondAttribute="trailing" constant="40" id="92i-tA-1jI"/>
+                            <constraint firstItem="nbt-q1-bms" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cn3-uC-bXQ"/>
+                            <constraint firstItem="nbt-q1-bms" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="J2O-fe-o2q"/>
+                            <constraint firstItem="nbt-q1-bms" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="VJy-IO-KjS"/>
+                            <constraint firstItem="Kj5-Tm-MDs" firstAttribute="top" secondItem="nbt-q1-bms" secondAttribute="bottom" constant="20" id="ecH-Pt-ayG"/>
+                            <constraint firstItem="1io-Ff-vxK" firstAttribute="top" secondItem="Kj5-Tm-MDs" secondAttribute="bottom" constant="20" id="fDU-U5-k2P"/>
+                            <constraint firstItem="1io-Ff-vxK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hvZ-fA-BZl"/>
+                            <constraint firstItem="Kj5-Tm-MDs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="s47-Yn-yfW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPauseTimer" destination="1io-Ff-vxK" id="ha2-u7-1fN"/>
+                        <outlet property="btnStartTimer" destination="Kj5-Tm-MDs" id="otf-Ke-h0g"/>
+                        <outlet property="lblTimer" destination="nbt-q1-bms" id="0Zl-O4-Wa4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
